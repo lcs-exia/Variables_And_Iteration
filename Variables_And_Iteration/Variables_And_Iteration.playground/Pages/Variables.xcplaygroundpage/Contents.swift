@@ -1,4 +1,4 @@
-//: [Previous](@previous) / [Next](@next)
+ //: [Previous](@previous) / [Next](@next)
 //: # Variables
 //: The following two statements are required to make the playground run. Please do not remove.
 import Cocoa
@@ -25,7 +25,7 @@ var age = 40
  Notice in the sidebar that the age changes.
  */
 
-//age = 15
+//age = 14
 
 /*:
  A variable, once set, is assigned a type by Swift, the programming language.

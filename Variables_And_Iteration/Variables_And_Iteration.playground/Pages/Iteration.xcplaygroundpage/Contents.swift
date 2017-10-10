@@ -29,7 +29,7 @@ for value in 1...4 {
 let canvas = Canvas(width: 300, height: 400)
 
 // Line width
-canvas.defaultLineWidth = 5
+canvas.defaultLineWidth = 5                  
 
 // Draw the "rungs" of a ladder
 for y in stride(from: 0, through: 400, by: 50) {
