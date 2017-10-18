@@ -41,6 +41,7 @@ for y in stride(from: 0, through: 90, by: 1){
         canvas.drawLine(fromX: 209+y, fromY: 0, toX: 209+y, toY: 90+y)
 }
 canvas.drawRectangle(centreX: 150, centreY: 64, width: 300, height: 128)
+
 // Draw Small Mountains
 canvas.fillColor = Color.init(hue: 30 , saturation: 0, brightness: 60, alpha: 100)
 canvas.lineColor = Color.init(hue: 30 , saturation: 0, brightness: 55, alpha: 100)

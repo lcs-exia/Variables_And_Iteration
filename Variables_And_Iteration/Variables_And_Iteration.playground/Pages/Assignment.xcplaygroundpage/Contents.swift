@@ -20,22 +20,24 @@ import PlaygroundSupport
 // Create canvas
 let canvas = Canvas(width: 500, height: 500)
 
-//No fill
-canvas.drawShapesWithFill = false
-canvas.drawShapesWithBorders = true
-canvas.borderColor = Color.purple
-// Loop to set horizontal position
+// Draw Lines
 for x in stride(from: 50, through: 450, by: 100){
- 
-    // Loop to set vertical position
-    for y in stride(from: 450, through: 50, by: -100){
-        // Draw five squares
-        for z in stride(from: 100, through: 20, by: -20){
-            canvas.drawRectangle(centreX: x, centreY: y, width: z, height: z)
-        }
+    canvas.drawLine(fromX: x, fromY: 0, toX: x, toY: 500)
+}
+for y in stride(from: 50, through: 450, by: 100){
+    canvas.drawLine(fromX: 0, fromY: y, toX: 500, toY: y)
+}
+for x in stride(from: 0, through: 500, by: 100){
+    for y in stride(from: 0, through: 500, by: 100){
+        canvas.drawLine(fromX: x, fromY: y, toX: y, toY:x )
+        canvas.drawLine(fromX: x, fromY: y, toX: -y, toY: -x)
+        canvas.drawLine(fromX: x, fromY: y, toX: y, toY: y)
+        canvas.drawLine(fromX: y, fromY: x, toX: x, toY: x)
     }
 }
 
+// Draw Squares
+for x in stride(from: <#T##Strideable#>, through: <#T##Strideable#>, by: <#T##Comparable & SignedNumeric#>)
 
 /*:
  ## Template code
