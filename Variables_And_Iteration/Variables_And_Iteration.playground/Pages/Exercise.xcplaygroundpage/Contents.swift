@@ -19,8 +19,8 @@ let canvas = Canvas(width: 300, height: 300)
 //: ## Add your code below
 // Draw Circles
 canvas.fillColor = Color.black
-for y in stride(from: 0, through: 300, by: 30){
-    for x in stride(from: 0, through: 300, by: 30){
+for y in stride(from: 0, through: 300, by: 25){
+    for x in stride(from: 0, through: 300, by: 25){
           canvas.drawEllipse(centreX: x, centreY: y, width: 2, height: 2)
     }
 }
@@ -28,16 +28,37 @@ for y in stride(from: 0, through: 300, by: 30){
 // Draw Large Mountains
 canvas.drawShapesWithBorders = false
 canvas.fillColor = Color.init(hue: 30 , saturation: 0, brightness: 80, alpha: 100)
-canvas.drawRectangle(centreX: 150, centreY: 90, width: 300, height: 180)
-canvas.lineColor = Color.init(hue: 30, saturation: 0, brightness: 80, alpha: 100)
-for x in stride(from: 0, through: 150, by: 1){
-    canvas.drawLine(fromX: 0, fromY: x, toX: 150, toY: x)
+canvas.lineColor = Color.init(hue: 30, saturation: 0, brightness: 75, alpha: 100)
+for x in stride(from: 0, through: 180, by: 1){
+    canvas.drawLine(fromX: 0, fromY: x, toX: 180-x, toY: x)
+    canvas.drawLine(fromX: 100, fromY: x, toX: 280-x, toY: x)
+    canvas.drawLine(fromX: 200, fromY: x, toX: 380-x, toY: x)
+
 }
+for y in stride(from: 0, through: 90, by: 1){
+    canvas.drawLine(fromX: 9+y, fromY: 0, toX: 9+y, toY: 90+y)
+        canvas.drawLine(fromX: 109+y, fromY: 0, toX: 109+y, toY: 90+y)
+        canvas.drawLine(fromX: 209+y, fromY: 0, toX: 209+y, toY: 90+y)
+}
+canvas.drawRectangle(centreX: 150, centreY: 64, width: 300, height: 128)
 // Draw Small Mountains
 canvas.fillColor = Color.init(hue: 30 , saturation: 0, brightness: 60, alpha: 100)
-canvas.drawRectangle(centreX: 150, centreY: 45, width: 300, height: 90)
-
-
+canvas.lineColor = Color.init(hue: 30 , saturation: 0, brightness: 55, alpha: 100)
+for x in stride(from: 0, through: 90, by: 1){
+    canvas.drawLine(fromX: 0, fromY: x, toX: 90-x, toY: x)
+    canvas.drawLine(fromX: 60, fromY: x, toX: 150-x, toY: x)
+    canvas.drawLine(fromX: 120, fromY: x, toX: 210-x, toY: x)
+    canvas.drawLine(fromX: 180, fromY: x, toX: 270-x, toY: x)
+    canvas.drawLine(fromX: 240, fromY: x, toX: 330-x, toY: x)
+}
+for y in stride(from: 0, through: 45, by: 1){
+    canvas.drawLine(fromX: 14+y, fromY: 0, toX: 14+y, toY: 45+y)
+    canvas.drawLine(fromX: 74+y, fromY: 0, toX: 74+y, toY: 45+y)
+    canvas.drawLine(fromX: 134+y, fromY: 0, toX: 134+y, toY: 45+y)
+    canvas.drawLine(fromX: 194+y, fromY: 0, toX: 194+y, toY: 45+y)
+    canvas.drawLine(fromX: 254+y, fromY: 0, toX: 254+y, toY: 45+y)
+}
+canvas.drawRectangle(centreX: 150, centreY: 30, width: 300, height: 60)
 
 /*:
  ## Template code
