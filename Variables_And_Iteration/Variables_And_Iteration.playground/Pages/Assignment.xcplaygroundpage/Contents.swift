@@ -21,12 +21,18 @@ import PlaygroundSupport
 let canvas = Canvas(width: 500, height: 500)
 
 // Draw Lines
+for x in stride(from: 0, through: 500, by: 10){
+    canvas.drawLine(fromX: 500, fromY: x, toX: x, toY: 0)
+    canvas.drawLine(fromX: x, fromY: 500, toX: 0, toY: x)
+    canvas.drawLine(fromX: 0, fromY: 500, toX: x, toY: 0)
+    canvas.drawLine(fromX: 500, fromY: 0, toX: 0, toY: x)
+}
+
 for x in stride(from: 50, through: 450, by: 100){
     canvas.drawLine(fromX: x, fromY: 0, toX: x, toY: 500)
+    canvas.drawLine(fromX: 0, fromY: x, toX: 500, toY: x)
 }
-for y in stride(from: 50, through: 450, by: 100){
-    canvas.drawLine(fromX: 0, fromY: y, toX: 500, toY: y)
-}
+
 for x in stride(from: 0, through: 500, by: 100){
     for y in stride(from: 0, through: 500, by: 100){
         canvas.drawLine(fromX: x, fromY: y, toX: y, toY:x )
@@ -37,8 +43,16 @@ for x in stride(from: 0, through: 500, by: 100){
 }
 
 // Draw Squares
-for x in stride(from: <#T##Strideable#>, through: <#T##Strideable#>, by: <#T##Comparable & SignedNumeric#>)
-
+for x in stride(from: 0, through: 500, by: 100){
+    for y in stride(from: 0, through: 500, by: 100){
+        canvas.drawRectangle(centreX: x, centreY: y, width: 50, height: 50)
+    }
+}
+for x in stride(from: 50, through: 500, by: 100){
+    for y in stride(from: 50, through: 500, by: 100){
+        canvas.drawRectangle(centreX: x, centreY: y, width: 50, height: 50)
+    }
+}
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
